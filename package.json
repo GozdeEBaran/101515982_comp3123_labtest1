@@ -1,0 +1,24 @@
+{
+  "name": "101515982_comp3123_labtest1",
+  "version": "1.0.0",
+  "description": "COMP3123 Lab Test 1 - JavaScript ES6 and Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "q1": "node question1/index.js",
+    "q2": "node question2/index.js",
+    "q3": "node question3/index.js",
+    "q3:add": "node question3/add.js",
+    "q3:remove": "node question3/remove.js"
+  },
+  "keywords": [
+    "javascript",
+    "es6",
+    "nodejs"
+  ],
+  "author": "Student ID: 101515982",
+  "license": "ISC",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
