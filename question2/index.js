@@ -16,7 +16,6 @@ function rejectedPromise() {
     }, 500);
   });
 }
-// call both promises separately
 resolvedPromise()
   .then((success) => {
     console.log(success);

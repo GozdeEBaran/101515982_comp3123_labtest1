@@ -1,12 +1,9 @@
 // COMP3123 Lab Test 1 - Question 1
 // Student ID: 101515982
 
-// Helper function to check
 function isValidString(input) {
   return typeof input === "string" && input.trim().length > 0;
 }
-
-// Converts lowercase
 function lowerCaseWords(arr) {
   return new Promise((resolve, reject) => {
     if (!Array.isArray(arr)) {
