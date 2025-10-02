@@ -1,7 +1,7 @@
 // Question 2 - COMP3123 Lab Test 1
 // Student ID: 101515982
 
-// Simulates a successful async task with a delay
+//  async task with a delay
 function simulateSuccessAsync() {
   return new Promise((resolve) => {
     setTimeout(() => {
@@ -14,7 +14,7 @@ function simulateSuccessAsync() {
   });
 }
 
-// Simulates a failed async task with a delay
+// failed async task with a delay
 function simulateFailureAsync() {
   return new Promise((_, reject) => {
     setTimeout(() => {
@@ -27,7 +27,6 @@ function simulateFailureAsync() {
   });
 }
 
-// Execute the success simulation
 simulateSuccessAsync()
   .then((data) => {
     console.log("Success:", data);
@@ -36,7 +35,6 @@ simulateSuccessAsync()
     console.error("Error during success simulation:", error);
   });
 
-// Execute the failure simulation
 simulateFailureAsync()
   .then((data) => {
     console.log("Unexpected success:", data);

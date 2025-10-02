@@ -1,12 +1,12 @@
 // COMP3123 Lab Test 1 - Question 1
 // Student ID: 101515982
 
-// Helper function to verify a valid non-empty string
+// Helper function to check
 function isValidString(input) {
   return typeof input === "string" && input.trim().length > 0;
 }
 
-// Converts all string elements in an array to lowercase
+// Converts lowercase
 function convertStringsToLowercase(arr) {
   return new Promise((resolve, reject) => {
     if (!Array.isArray(arr)) {
@@ -25,7 +25,6 @@ function convertStringsToLowercase(arr) {
   });
 }
 
-// Sample input array with mixed types
 const sampleData = ["PIZZA", 10, true, 25, false, "Wings"];
 
 console.log("Original Input:", sampleData);
