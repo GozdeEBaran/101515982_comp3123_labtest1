@@ -1,44 +1,34 @@
 // Question 2 - COMP3123 Lab Test 1
 // Student ID: 101515982
 
-//  async task with a delay
-function simulateSuccessAsync() {
+function resolvedPromise() {
   return new Promise((resolve) => {
     setTimeout(() => {
-      const result = {
-        status: "success",
-        detail: "message: delayed success!",
-      };
-      resolve(result);
+      resolve({ message: "delayed success!" });
     }, 500);
   });
 }
 
-// failed async task with a delay
-function simulateFailureAsync() {
+function rejectedPromise() {
   return new Promise((_, reject) => {
     setTimeout(() => {
-      try {
-        throw new Error("error: delayed exception!");
-      } catch (err) {
-        reject({ status: "failure", message: err.message });
-      }
+      reject({ error: "delayed exception!" });
     }, 500);
   });
 }
-
-simulateSuccessAsync()
-  .then((data) => {
-    console.log("Success:", data);
+// call both promises separately
+resolvedPromise()
+  .then((success) => {
+    console.log(success);
   })
-  .catch((error) => {
-    console.error("Error during success simulation:", error);
+  .catch((err) => {
+    console.log(err);
   });
 
-simulateFailureAsync()
-  .then((data) => {
-    console.log("Unexpected success:", data);
+rejectedPromise()
+  .then((success) => {
+    console.log(success);
   })
-  .catch((error) => {
-    console.error("Caught simulated error:", error);
+  .catch((err) => {
+    console.log(err);
   });

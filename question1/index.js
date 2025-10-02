@@ -7,7 +7,7 @@ function isValidString(input) {
 }
 
 // Converts lowercase
-function convertStringsToLowercase(arr) {
+function lowerCaseWords(arr) {
   return new Promise((resolve, reject) => {
     if (!Array.isArray(arr)) {
       return reject(new Error("Provided input is not an array."));
@@ -25,11 +25,11 @@ function convertStringsToLowercase(arr) {
   });
 }
 
-const sampleData = ["PIZZA", 10, true, 25, false, "Wings"];
+const mixedArray = ["PIZZA", 10, true, 25, false, "Wings"];
 
-console.log("Original Input:", sampleData);
+console.log("Original Input:", mixedArray);
 
-convertStringsToLowercase(sampleData)
+lowerCaseWords(mixedArray)
   .then((result) => {
     console.log("Lowercased Strings:", result);
   })
